@@ -39,7 +39,13 @@ const defaultTokenEndpoint = process.env
     }/`
   : process.env.REACT_APP_TOKEN_GENERATION_ENDPOINT;
 
-const envPolicyConfig = JSON.parse(process.env.REACT_APP_POLICY_CONFIG || "{}");
+// const envPolicyConfig = JSON.parse(process.env.REACT_APP_POLICY_CONFIG || "{}");
+
+const envPolicyConfig = {
+  admin: { center: ["trainer"], sidepane: ["user", "admin"] },
+  user: { center: ["trainer"], sidepane: ["admin", "user"] },
+  trainer: { center: ["trainer"], sidepane: ["user", "admin"] },
+};
 
 let appName;
 if (window.location.host.includes("localhost")) {
