@@ -22,12 +22,12 @@ export const SpeakerTag = () => {
     <Flex
       align="center"
       justify="center"
-      css={{ flex: "1 1 0", color: "$textPrimary", "@md": { display: "none" } }}
+      css={{ flex: "1 1 0", color: "$textPrimary", "@md": { display: "none" }, filter: "invert(1)" }}
     >
       <VolumeOneIcon />
       <Text
         variant="md"
-        css={{ ...textEllipsis(200), ml: "$2" }}
+        css={{ ...textEllipsis(200), ml: "$2"}}
         title={dominantSpeaker.name}
       >
         {dominantSpeaker.name}
@@ -58,12 +58,7 @@ export const Logo = () => {
   }
   return (
     <LogoImg
-      src={
-        logo ||
-        (themeType === "dark"
-          ? require("../../images/logo-light.svg")
-          : require("../../images/logo-dark.svg"))
-      }
+      src="https://teamvivo.com/wp-content/uploads/2022/02/vivo_logo_LIGHT_376x200-cropped.png"
       alt="Brand Logo"
       width={132}
       height={40}

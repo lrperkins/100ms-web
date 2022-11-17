@@ -16,37 +16,25 @@ function ErrorPage({ error }) {
     >
       <Box css={{ position: "relative", overflow: "hidden", r: "$3" }}>
         <img
-          src={
-            themeType === "dark"
-              ? require("../images/error-bg-dark.svg")
-              : require("../images/error-bg-light.svg")
-          }
+          src="https://teamvivo.com/wp-content/uploads/2021/05/VIVO_APRIL221-622-web-edited.jpg"
           alt="Error Background"
         />
         {window.location.hostname === "localhost" ? (
           <Flex
             align="center"
             direction="column"
-            css={{ position: "absolute", size: "100%", top: "33.33%", left: 0 }}
+            css={{ position: "absolute", top: "33.33%", left: 100 }}
           >
-            <Text variant="h3">Almost There!</Text>
+            <div css={{ }}>
+            <Text variant="h3" css={{ color: 'white', maxWidth: 500, textAlign: 'center', textShadow: '3px 2px 4px rgb(0 0 0 / 50%)' }}>Vivo Fitness App</Text>
             <Text
               variant="body1"
-              css={{ margin: "1.75rem", textAlign: "center" }}
+              css={{ margin: "1.75rem", textAlign: "center", color: 'white', maxWidth: 500, margin: '0 auto', textShadow: '3px 2px 4px rgb(0 0 0 / 50%)', fontWeight: 'bold', fontSize: 22  }}
             >
               {
-                "Hi there! thanks for trying us out, there is not much here yet. Let's get you all setup to join a meeting. "
+                "Hi there! The Vivo team is working on an an upgraded experience for our users. Follow the specific meeting link to access your workout. "
               }
-              <a
-                href={CREATE_ROOM_DOC_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ textDecoration: "underline" }}
-              >
-                Click here
-              </a>{" "}
-              for next steps
-            </Text>
+            </Text></div>
           </Flex>
         ) : (
           <Flex

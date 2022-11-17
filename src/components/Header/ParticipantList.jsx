@@ -127,6 +127,8 @@ export const ParticipantCount = () => {
         w: "auto",
         p: "$4",
         h: "auto",
+        filter: "invert(1)",
+        borderColor: "black",
       }}
       onClick={() => {
         if (peerCount > 0) {

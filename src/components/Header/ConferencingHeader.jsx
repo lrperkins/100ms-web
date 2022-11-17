@@ -9,7 +9,7 @@ export const ConferencingHeader = ({ isPreview }) => {
     <Flex
       justify="between"
       align="center"
-      css={{ position: "relative", height: "100%" }}
+      css={{ position: "relative", height: "100%", background: "#0a487e" }}
     >
       <Flex align="center" css={{ position: "absolute", left: "$10" }}>
         <Logo />
